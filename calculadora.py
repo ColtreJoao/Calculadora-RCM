@@ -199,4 +199,43 @@ def funcoes_exponenciais():
         elif opcao == '4':
             break
         else:
+            print("Opção inválida. Tente novamente.")            
+def matrizes():
+    def matrizes():
+
+     while True:
+        print("Operações com Matrizes")
+        print("1. Soma de Matrizes")
+        print("2. Subtração de Matrizes")
+        print("3. Multiplicação de Matrizes")
+        print("4. Sair")
+        opcao = int(input("Escolha uma opção: "))
+
+        if opcao == 1:
+            matrizA = np.array(eval(input("Digite a matriz A no formato [[a11, a12, ...], [a21, a22, ...], ...]: ")))
+            matrizB = np.array(eval(input("Digite a matriz B no formato [[b11, b12, ...], [b21, b22, ...], ...]: ")))
+            if matrizA.shape == matrizB.shape:
+                print("Resultado da soma:\n", matrizA + matrizB)
+            else:
+                print("As matrizes devem ter as mesmas dimensões para realizar a soma.")
+        elif opcao == 2:
+            matrizA = np.array(eval(input("Digite a matriz A no formato [[a11, a12, ...], [a21, a22, ...], ...]: ")))
+            matrizB = np.array(eval(input("Digite a matriz B no formato [[b11, b12, ...], [b21, b22, ...], ...]: ")))
+            if matrizA.shape == matrizB.shape:
+                print("Resultado da subtração:\n", matrizA - matrizB)
+            else:
+                print("As matrizes devem ter as mesmas dimensões para realizar a subtração.")
+        elif opcao == 3:
+            matrizA = np.array(eval(input("Digite a matriz A no formato [[a11, a12, ...], [a21, a22, ...], ...]: ")))
+            matrizB = np.array(eval(input("Digite a matriz B no formato [[b11, b12, ...], [b21, b22, ...], ...]: ")))
+            if matrizA.shape[1] == matrizB.shape[0]:
+                print("Resultado da multiplicação:\n", np.dot(matrizA, matrizB))
+            else:
+                print("O número de colunas da matriz A deve ser igual ao número de linhas da matriz B para realizar a multiplicação.")
+        elif opcao == 4:
+            break
+        else:
             print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    menu_principal()
